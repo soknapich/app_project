@@ -17,7 +17,7 @@ pipeline {
 
     stage('Check NGINX') {
       steps {
-        sh 'docker cp ./app/index.php laravel-nginx:/usr/share/nginx/html/index.php'
+        sh 'docker cp ./app/index.html laravel-nginx:/usr/share/nginx/html/index.html'
       }
     }
   }
