@@ -40,7 +40,9 @@
     <div class="container">
         <h1>Welcome to Jenkins PHP Project!</h1>
         <p>This page is served by NGINX and interpreted by PHP inside a Docker container.</p>
-        <div class="status">✔ <?php echo "Jenkins Build Successful";?></div>
+        <div class="status">✔ <?php echo "Jenkins Build Successful";?>
+        <?php echo 9+12; ?>
+    </div>
     </div>
 </body>
 </html>
