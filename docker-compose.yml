@@ -5,14 +5,14 @@ services:
     image: php:8.2-fpm
     container_name: laravel-php
     volumes:
-      - ./app:/usr/share/nginx/html:rw
+      - ./app:/usr/share/nginx/html
 
   nginx:
-    image: nginx:alpine
+    image: nginx
     container_name: laravel-nginx
     ports:
       - "8085:80"
     volumes:
-      - ./app:/usr/share/nginx/html:rw
+      - ./app:/usr/share/nginx/html
     depends_on:
       - php
