@@ -17,7 +17,7 @@ pipeline {
 
     stage('Check NGINX') {
       steps {
-        sh 'curl -I http://localhost:8050 || true'
+        sh 'docker cp ./app/index.php laravel-nginx:/usr/share/nginx/html/index.php'
       }
     }
   }
