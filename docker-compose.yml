@@ -4,9 +4,8 @@ services:
   php:
     image: php:8.2-fpm
     container_name: laravel-php
-    working_dir: /var/www/html
     volumes:
-      - /app:/usr/share/nginx/html/
+      - /app:/usr/share/nginx/html:rw
 
   nginx:
     image: nginx:alpine
@@ -14,6 +13,6 @@ services:
     ports:
       - "8085:80"
     volumes:
-      - /app:/usr/share/nginx/html/
+      - /app:/usr/share/nginx/html:rw
     depends_on:
       - php
